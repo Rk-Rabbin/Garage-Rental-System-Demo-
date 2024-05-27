@@ -1,0 +1,47 @@
+{% extends 'Homepage/base2.html' %}
+{% load static %}
+{% block title %}Vehicle Register{% endblock title %}
+{% block main-content %}
+<div style="padding-top:80px">
+<div class="container">
+ <div class="row my-3">
+  <div class="col-sm-6 offset-sm-3">
+   <div class="form-box" style="  border: 2px solid black;border-radius: 15px;padding: 10px;">
+		<div class="header-text" style="color: black; font-family:'Dancing Script', cursive; font-weight:bold; font-size:35px">
+			Vehicle Regitration Form
+		</div>
+      <hr>
+      <form action="" method="post" novalidate class="shadow p-5"  style="color: black; font-family:'Copperplate'; font-size:30px">
+        {% if messages %}
+         {% for message in messages %}
+               <p {% if message.tags %}class="alert alert-{{message.tags}} mb-5"{% endif %}>{{message}}</p>
+         {% endfor %}
+        {% endif %}
+        {% csrf_token %}
+            <br><label for="fname">Vehicle Number</label>
+            <input type="text" id="vnum" name="vnum" placeholder="Vehicle Number" style="border-radius:20px;height:45px; width:400px">
+            <br><label for="type">Vehicle Type:</label><br>
+            <select name="type" id="type" style="font-size:0px">
+                <option value="Car">Car</option>
+                <option value="Bus">Bus</option>
+                <option value="Truck">Truck</option>
+                <option value="Bicycle">Bicycle</option>
+                <option value="Bike">Bike</option>
+                <option value="Minibus">Minibus</option>
+                <option value="Van">Van</option>
+            </select>
+        <br>
+         <input type="submit" style="display: inline-block;padding: 8px 30px;background-color: #ffbe33;color:black;border-radius: 45px;
+         -webkit-transition: all 0.3s;transition: all 0.3s;border: none; margin-top:50px; margin-left:150px" value="Register"> <br>
+        <br>
+        {% if form.non_field_errors %}
+            {% for error in form.non_field_errors %}
+                <p class="alert alert-danger my-3">{{error}}</p>
+            {% endfor %}
+        {% endif %}
+       </form>
+      </div>
+     </div>
+    </div>
+</div>
+    {% endblock main-content %}

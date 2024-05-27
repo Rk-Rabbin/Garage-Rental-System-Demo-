@@ -1,0 +1,67 @@
+{% extends 'Homepage/base2.html' %}
+{% load static %}
+{% block title %}My Vehicles{% endblock title %}
+{% block main-content %}
+<div class="container mt-6" style="padding-top:110px">
+    <h2 class="text-center alert alert-warning">My Vehicles List (Demo List)</h2>
+    <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Vehicle Owner ID</th>
+            <th scope="col">Vehicle Type</th>
+            <th scope="col">Vehicle Number</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">67</th>
+                <td>car</td>
+                <td>Dhaka Metro Ka 1234</td>
+                <td>
+                <a href="/" class="btn btn-warning btn-sm" style="height:37px">Edit</a>
+                <form action="/" method="post" class="d-inline">
+                    <input type="submit" class="btn btn-danger" value="Delete">
+                </form>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">86</th>
+                <td>Bike</td>
+                <td>Dhaka Metro Ka 1234</td>
+                <td>
+                <a href="/" class="btn btn-warning btn-sm" style="height:37px">Edit</a>
+                <form action="/" method="post" class="d-inline">
+                    <input type="submit" class="btn btn-danger" value="Delete">
+                </form>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">216</th>
+                <td>Truck</td>
+                <td>Dhaka Metro Ka 1234</td>
+                <td>
+                <a href="/" class="btn btn-warning btn-sm" style="height:37px">Edit</a>
+                <form action="/" method="post" class="d-inline">
+                    <input type="submit" class="btn btn-danger" value="Delete">
+                </form>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">86</th>
+                <td>Bike</td>
+                <td>Dhaka Metro Ka 1234</td>
+                <td>
+                <a href="/" class="btn btn-warning btn-sm" style="height:37px">Edit</a>
+                <form action="/" method="post" class="d-inline">
+                    <input type="submit" class="btn btn-danger" value="Delete">
+                </form>
+                </td>
+              </tr>
+        </tbody>
+      </table>
+</div>   
+<div style="padding-bottom:140px">  
+</div>   
+{% endblock main-content %}
+
